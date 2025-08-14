@@ -1,0 +1,73 @@
+{
+  "family_conditions": [
+    "DT1",
+    "DT2",
+    "dysthyroidie",
+    "HTA",
+    "ob\u00e9sit\u00e9",
+    "dyslipid\u00e9mie",
+    "Coronaropathie",
+    "Autisme",
+    "polypose familiale",
+    "Deficit17alphaOH"
+  ],
+  "psy_conditions": [
+    "d\u00e9pression",
+    "TCA",
+    "troubles anxieux",
+    "anxi\u00e9t\u00e9",
+    "troubles du sommeil",
+    "bipolarit\u00e9",
+    "TOC",
+    "trouble panique",
+    "stress post-traumatique",
+    "troubles de l humeur"
+  ],
+  "treatment_conditions": [
+    "anti-d\u00e9pressif",
+    "levothyrox",
+    "hypolip\u00e9miant",
+    "anti-hypertenseur",
+    "Metformine",
+    "anxiolytique",
+    "insuline",
+    "sulfamide",
+    "contraceptif",
+    "corticoides",
+    "FIV",
+    "fer",
+    "statine",
+    "antalgique",
+    "anti-allergique"
+  ],
+  "medical_conditions": [
+    "Levothyrox",
+    "fer",
+    "Probiotique",
+    "Metformine",
+    "IDPP4",
+    "ISGLT2",
+    "Ozempic",
+    "cabergoline",
+    "Mounjaro",
+    "Victoza",
+    "contraceptif",
+    "antidiab\u00e9tique",
+    "testosterone",
+    "SAS",
+    "fibrates",
+    "antid\u00e9presseur",
+    "corticoth\u00e9rapie"
+  ],
+  "model_version": "1.0",
+  "created_date": "2025-06-12T23:10:24.425903",
+  "training_samples": 171,
+  "test_samples": 43,
+  "features_count": 82,
+  "performance_metrics": {
+    "hamming_loss": 0.15348837209302327,
+    "jaccard_score": 0.5658914728682171,
+    "macro_f1": 0.5940663001832418,
+    "micro_f1": 0.6796116504854369
+  }
+}
