@@ -1,9 +1,11 @@
+import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import pandas as pd
 import numpy as np
 import joblib
 import json
+import sklearn
 import uvicorn
 
 
@@ -28,6 +30,14 @@ with open("model_artifacts/feature_order.json", "r") as f:
 with open("model_artifacts/preprocessing_metadata.json", "r") as f:
     metadata = json.load(f)
 
+@app.get("/debug")
+async def debug_info():
+    return {
+        "scikit_learn_version": sklearn.__version__,
+        "model_type": str(type(model)),
+        "model_has_monotonic_cst": hasattr(model.estimators_[0], 'monotonic_cst') if hasattr(model, 'estimators_') else False,
+        "python_version": os.sys.version
+    }
 @app.get("/")
 async def root():
     return {
