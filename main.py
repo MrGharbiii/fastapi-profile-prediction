@@ -32,6 +32,8 @@ with open("model_artifacts/preprocessing_metadata.json", "r") as f:
 
 @app.get("/debug")
 async def debug_info():
+    print(f"🔍 Scikit-learn version: {sklearn.__version__}")
+    print(f"🐍 Python version: {os.sys.version}")
     return {
         "scikit_learn_version": sklearn.__version__,
         "model_type": str(type(model)),
@@ -138,4 +140,5 @@ def has_condition(value, condition):
     return int(condition_lower in value_str)
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=port)
